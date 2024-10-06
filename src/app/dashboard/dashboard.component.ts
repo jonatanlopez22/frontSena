@@ -6,9 +6,8 @@ import { SidemenuComponent } from '../shared/sidemenu/sidemenu.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterModule, SidemenuComponent],
+  imports: [CommonModule,RouterModule, SidemenuComponent],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
 })
 export  default class DashboardComponent {
 

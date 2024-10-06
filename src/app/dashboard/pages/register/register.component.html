@@ -1,0 +1,203 @@
+<!-- component -->
+
+<div
+  class="relative min-h-screen flex items-center justify-center bg-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
+  style="
+    background-image: url(https://images.unsplash.com/photo-1532423622396-10a3f979251a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80);
+  "
+>
+  <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+  <div
+    class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-lg z-10"
+  >
+    <div class="grid gap-8 grid-cols-1">
+      <div class="flex flex-col">
+        <div class="flex flex-col items-center text-center">
+          <h2 class="font-semibold text-lg">Create Acount</h2>
+        </div>
+        <div class="mt-5">
+          <form  [formGroup]="formRegister">
+            <div>
+              <div class="md:space-y-2 mb-3">
+                <div class="md:flex flex-row md:space-x-4 w-full text-xs">
+                  <div class="mb-3 space-y-2 w-full text-xs">
+                    <label class="font-semibold text-gray-600 py-2"
+                      >UserName</label
+                    >
+                    <input
+                      placeholder="UserName"
+                      class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                      required="required"
+                      type="text"
+                      formControlName="username"
+                      name="username"
+                      id="username"
+                    />
+                    <p class="text-red text-xs hidden">
+                      Please fill out this field.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="md:flex flex-row md:space-x-4 w-full text-xs">
+                  <div class="mb-3 space-y-2 w-full text-xs">
+                    <label class="font-semibold text-gray-600 py-2"
+                      >First Name</label
+                    >
+                    <input
+                      placeholder="First-Name"
+                      class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                      required="required"
+                      type="text"
+                      formControlName="firstName"
+                      name="firstName"
+                      id="firstName"
+                    />
+                    <p class="text-red text-xs hidden">
+                      Please fill out this field.
+                    </p>
+                  </div>
+                  <div class="mb-3 space-y-2 w-full text-xs">
+                    <label class="font-semibold text-gray-600 py-2"
+                      >Last-name</label
+                    >
+                    <input
+                      placeholder="Last-name"
+                      class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                      type="text"
+                      formControlName="lastName"
+                      name="lastName"
+                      id="lastName"
+                    />
+                    <p class="text-red text-xs hidden">
+                      Please fill out this field.
+                    </p>
+                  </div>
+                </div>
+                <div class="mb-3 space-y-2 w-full text-xs">
+                  <div class="flex flex-wrap items-stretch w-full mb-4 relative">
+                    <div class="mb-3 space-y-2 w-full text-xs">
+                      <label class="font-semibold text-gray-600 py-2"
+                        >Address
+                      </label>
+                      <input
+                        placeholder="Address"
+                        class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                        required="required"
+                        type="text"
+                        formControlName="address"
+                        name="address"
+                        id="address"
+                      />
+                      <p class="text-red text-xs hidden">
+                        Please fill out this field.
+                      </p>
+                    </div>
+                    <div class="mb-3 space-y-2 w-full text-xs">
+                      <label class="font-semibold text-gray-600 py-2"
+                        >Phone
+                      </label>
+                      <input
+                        placeholder="Phone"
+                        class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                        required="required"
+                        type="text"
+                        formControlName="phone"
+                        name="phone"
+                        id="phone"
+                      />
+                      <p class="text-red text-xs hidden">
+                        Please fill out this field.
+                      </p>
+                    </div>
+                    <div class="mb-3 space-y-2 w-full text-xs">
+                      <label class="font-semibold text-gray-600 py-2"
+                        >Email
+                      </label>
+                      <input
+                        placeholder="Email ID"
+                        class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                        required="required"
+                        type="email"
+                        formControlName="email"
+                        name="email"
+                        id="email"
+                      />
+                      <p class="text-red text-xs hidden">
+                        Please fill out this field.
+                      </p>
+                    </div>
+
+                    <div class="md:flex flex-row md:space-x-4 w-full text-xs">
+                      <div class="mb-3 space-y-2 w-full text-xs">
+                        <label class="font-semibold text-gray-600 py-2"
+                          >password</label
+                        >
+                        <input
+                          placeholder="password"
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          required="required"
+                          type="password"
+                          formControlName="password"
+                          name="password"
+                          id="password"
+                        />
+                        <p class="text-red text-xs hidden">
+                          Please fill out this field.
+                        </p>
+                      </div>
+                      <div class="mb-3 space-y-2 w-full text-xs">
+                        <label class="font-semibold text-gray-600 py-2">
+                          Confirm Password</label
+                        >
+                        <input
+                          (keydown)="validate()"
+                          [formControl]="control"
+                          placeholder="Confirm Password"
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          required="required"
+                          type="password"
+
+                          name="password2"
+                          id="password2"
+                        />
+                        <br>
+                        <p class="text-red text-xs hidden">
+                          Please fill out this field.
+                        </p>
+                      </div>
+                    </div>
+                    <td *ngIf="showMessage">las contraseñas no coinciden</td>
+                  </div>
+
+                  <p class="text-xs text-red-500 text-right my-3">
+                    Required fields are marked with an asterisk
+                    <abbr title="Required field">*</abbr>
+                  </p>
+                  <div
+                    class="mt-5 text-right md:space-x-3 md:block flex flex-col-reverse"
+                  >
+                    <button
+                      class="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-full hover:shadow-lg hover:bg-gray-100"
+                      routerLink="/login"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                    (click)="createAcount()"
+                      class="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
