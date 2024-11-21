@@ -15,16 +15,11 @@ export class LoginService {
   private http = inject(HttpClient);
   private baseUrl = appSettings.apiUrl
 
-
   constructor() { }
-
-
-
 
   createAcount(user: User) : Observable<ResponseRegister>{
     const headers = { 'content-type': 'application/json' };
     const body = JSON.stringify(user);
-    console.log(body)
     return this.http.post<ResponseRegister>(`${this.baseUrl}/auth/register`,body, { headers })
   }
 
@@ -32,7 +27,6 @@ export class LoginService {
   login(login: Login) : Observable<ResponseAccess>{
     const headers = { 'content-type': 'application/json' };
     const body = JSON.stringify(login);
-    console.log(body)
     return this.http.post<ResponseAccess>(`${this.baseUrl}/auth/login`,body, { headers })
   }
 

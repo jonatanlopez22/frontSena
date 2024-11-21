@@ -20,12 +20,10 @@ export default class LoginComponent {
   private roter= inject(Router)
   public formBuild = inject(FormBuilder)
 
-
   public formLogin:FormGroup = this.formBuild.group({
     username:['',Validators.required],
     password:['',Validators.required]
   })
-
 
   SignIn(){
     if(this.formLogin.invalid)return;
@@ -33,16 +31,13 @@ export default class LoginComponent {
     const objeto:Login ={
       username:this.formLogin.value.username,
       password:this.formLogin.value.password
-
     }
 
     this.loginService.login(objeto).subscribe({
       next:(data)=>{
-
-
-        console.log("----------------------"+data)
         if(data !== null){
-          localStorage.setItem("accessToken",data.accessToken)
+          localStorage.setItem("token",data.accessToken)
+          localStorage.setItem("use",objeto.username)
           this.roter.navigate(['dashboard'])
         }
       },

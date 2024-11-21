@@ -1,14 +1,17 @@
+import { ProductService } from '../../../services/product.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-shoes',
   standalone: true,
-  imports: [CommonModule,RouterLink,],
-  templateUrl: './shoes.component.html',
+  imports: [CommonModule],
+  templateUrl:   './shoes.component.html',
   styleUrl: './shoes.component.css'
 })
 export default class ShoesComponent {
 
+public productService = inject(ProductService)
+
 }
+

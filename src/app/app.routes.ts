@@ -26,17 +26,6 @@ export const routes: Routes = [
     loadComponent: () => import('./dashboard/dashboard.component'),
     children: [
       {
-        path: 'user/:id',
-        title: 'User',
-        loadComponent: () => import('./dashboard/pages/user/user.component'),
-      },
-
-      {
-        path: 'users-list',
-        title: 'Users',
-        loadComponent: () => import('./dashboard/pages/users/users.component'),
-      },
-      {
         path: 'shoes',
         title: 'Shoes',
         loadComponent: () =>

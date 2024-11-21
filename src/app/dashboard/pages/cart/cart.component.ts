@@ -1,15 +1,18 @@
+
+import { CartService } from './../../../services/cart.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule,RouterLink,],
+  imports: [CommonModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
 export  default class CartComponent {
 
-
+  public cartService = inject(CartService)
 }
